@@ -1,0 +1,139 @@
+/* =============================
+   Root Theme Color Variables
+   ============================= */
+   :root {
+    --primary: #00ff88;
+    --primary-dark: #00cc6a;
+    --primary-hover: #00cc6a;
+    --primary-shadow: rgba(0, 255, 136, 0.3);
+    --primary-border: rgba(0, 255, 136, 0.2);
+    --primary-border-light: rgba(0, 255, 136, 0.1);
+    --primary-bg-light: rgba(0, 255, 136, 0.05);
+    --primary-bg-faint: rgba(0, 255, 136, 0.02);
+  
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #cccccc;
+    --gray-dark: #999999;
+    --gray-light: #f0f0f0;
+    --bg-dark: #0a0a0a;
+    --bg-gradient: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    --bg-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, var(--primary-bg-light) 50%, rgba(0, 0, 0, 0.9) 100%);
+  }
+  
+  /* =============================
+     Global Styles
+     ============================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--bg-dark);
+    font-family: 'Arial', sans-serif;
+    color: var(--white);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin-left: 280px;
+  }
+  
+  /* =============================
+     Navbar / Sidebar
+     ============================= */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-gradient);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--primary-border-light);
+    z-index: 1000;
+  }
+  
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .profile-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--black);
+    position: relative;
+    box-shadow: 0 0 30px var(--primary-shadow);
+  }
+  
+  .profile-circle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--primary), var(--white), var(--primary));
+    animation: rotate 3s linear infinite;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 5px;
+  }
+  
+  .profile-title {
+    font-size: 14px;
+    color: var(--gray-dark);
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 5px;
+    color: var(--gray);
+    text-decoration: none;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .nav-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    transform: scaleY(0);
+    transition: transform 0.3s;
+  }
+  
+  .nav-item:hover,
+  .nav-item.active {
+    background: var(--primary-bg-light);
+    color: var(--primary);
+  }
+  
+  .nav-item:hover::before,
+  .nav-item.active::before {
+    transform: scaleY(1);
+  }
+  
+  
