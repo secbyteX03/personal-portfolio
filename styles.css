@@ -806,3 +806,266 @@ body {
     transform: translateY(-2px);
 }
 
+/* ============================================
+   CONTACT FOOTER SECTION
+   ============================================ */
+
+/* Footer Wrapper */
+.contact-footer {
+  background: var(--gradient-hero); /* semi-transparent dark-to-green gradient */
+  padding: var(--spacing-section) 0 var(--spacing-lg);
+  border-top: 1px solid var(--border-primary);
+  position: relative;
+  color: var(--text-secondary);
+}
+
+/* Subtle decorative overlays */
+.contact-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+      radial-gradient(circle at 30% 20%, rgba(0, 255, 136, 0.03) 0%, transparent 60%),
+      radial-gradient(circle at 70% 80%, rgba(0, 255, 136, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ============================================
+ GRID LAYOUT FOR INFO + FORM
+ ============================================ */
+.contact-footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxl);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* ============================================
+ CONTACT INFO PANEL
+ ============================================ */
+
+/* Headings */
+.contact-footer-info .section-header {
+  /* follows global section-header styling */
+}
+.contact-footer-info h3 {
+  font-size: var(--font-4xl);
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description text */
+.contact-footer-info p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xxl);
+}
+
+/* Contact details list */
+.contact-footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contact-footer-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: transform var(--transition-fast);
+}
+.contact-footer-item:hover {
+  transform: translateX(var(--spacing-sm));
+}
+
+/* Icon container */
+.contact-footer-icon {
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  color: var(--primary-green);
+}
+.contact-footer-item:hover .contact-footer-icon {
+  background: var(--primary-green);
+  transform: scale(1.1);
+}
+
+/* Detail text */
+.contact-footer-item span {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+.contact-footer-item:hover span {
+  color: var(--primary-green);
+}
+
+/* Social links row */
+.contact-footer-social {
+  display: flex;
+  gap: var(--spacing-md);
+}
+.contact-footer-social-link {
+  width: 45px;
+  height: 45px;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: var(--font-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+.contact-footer-social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 136, 0.2);
+  transition: left var(--transition-medium);
+}
+.contact-footer-social-link:hover::before {
+  left: 100%;
+}
+.contact-footer-social-link:hover {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  background: rgba(0, 255, 136, 0.1);
+  transform: translateY(-var(--spacing-xs));
+}
+
+/* ============================================
+ CONTACT FORM PANEL
+ ============================================ */
+
+/* Form wrapper */
+.contact-footer-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-2xl);
+  padding: var(--spacing-xxl);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pulsing background accent */
+.contact-footer-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.03) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Form groups */
+.footer-form-group {
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+.footer-form-group label {
+  display: block;
+  color: var(--primary-green);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+  transition: color var(--transition-fast);
+}
+.footer-form-group input,
+.footer-form-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  color: var(--text-primary);
+  font-size: var(--font-base);
+  transition: all var(--transition-fast);
+}
+.footer-form-group input:focus,
+.footer-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 var(--spacing-lg) rgba(0, 255, 136, 0.2);
+}
+
+/* Placeholder styling */
+.footer-form-group ::placeholder {
+  color: var(--text-dark);
+}
+
+/* Textarea specific */
+.footer-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit button */
+.footer-submit-btn {
+  width: 100%;
+  padding: var(--spacing-lg) 0;
+  font-size: var(--font-md);
+  font-weight: bold;
+  color: var(--text-black);
+  background: var(--gradient-green);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+.footer-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left var(--transition-medium);
+}
+.footer-submit-btn:hover::before {
+  left: 100%;
+}
+.footer-submit-btn:hover {
+  background: var(--primary-green-dark);
+  transform: translateY(-var(--spacing-xs));
+  box-shadow: 0 var(--spacing-md) var(--spacing-lg) var(--shadow-primary);
+}
+
+/* ============================================
+ KEYFRAMES
+ ============================================ */
+@keyframes pulse {
+  0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+  }
+  50% {
+      opacity: 0.6;
+      transform: scale(1.1);
+  }
+}
