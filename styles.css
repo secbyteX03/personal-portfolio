@@ -448,7 +448,7 @@ body {
    ABOUT SECTION
    ============================================ */
    .about-section {
-    padding: var(--spacing-section) 0;
+    padding: var(--spacing-section) var(--spacing-lg);
     position: relative;
 }
 
@@ -946,7 +946,6 @@ body {
     position: relative;                    
     overflow: hidden;                       
   }
-  
   
   .portfolio-link::before {
     content: '';
