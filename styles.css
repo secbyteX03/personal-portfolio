@@ -786,23 +786,35 @@ body {
     display: block;
   }
   
-  /* Show/hide filtered items */
-  #filter-all:checked ~ .portfolio-grid .portfolio-item { display: block; animation: fadeInUp 0.6s var(--transition-medium) forwards; }
-  #filter-web:checked ~ .portfolio-grid .portfolio-item,
-  #filter-logo:checked ~ .portfolio-grid .portfolio-item,
-  #filter-brand:checked ~ .portfolio-grid .portfolio-item,
-  #filter-apps:checked ~ .portfolio-grid .portfolio-item { display: none; }
-  #filter-web:checked ~ .portfolio-grid .portfolio-item.web-design,
-  #filter-logo:checked ~ .portfolio-grid .portfolio-item.logo-design,
-  #filter-brand:checked ~ .portfolio-grid .portfolio-item.branding,
-  #filter-apps:checked ~ .portfolio-grid .portfolio-item.apps-design {
+ /* Show/hide filtered items */
+#filter-all:checked ~ .portfolio-grid .portfolio-item {
     display: block;
     animation: fadeInUp 0.6s var(--transition-medium) forwards;
   }
   
+  /* Hide everything by default when a specific filter is checked */
+  #filter-web:checked  ~ .portfolio-grid .portfolio-item,
+  #filter-logo:checked ~ .portfolio-grid .portfolio-item,
+  #filter-brand:checked~ .portfolio-grid .portfolio-item,
+  #filter-apps:checked ~ .portfolio-grid .portfolio-item,
+  #filter-cyber:checked~ .portfolio-grid .portfolio-item {
+    display: none;
+  }
+  
+  /* Show only the matching category */
+  #filter-web:checked  ~ .portfolio-grid .portfolio-item.web-design,
+  #filter-logo:checked ~ .portfolio-grid .portfolio-item.logo-design,
+  #filter-brand:checked~ .portfolio-grid .portfolio-item.branding,
+  #filter-apps:checked ~ .portfolio-grid .portfolio-item.apps-design,
+  #filter-cyber:checked ~ .portfolio-grid .portfolio-item.cybersecurity {
+    display: block;
+    animation: fadeInUp 0.6s var(--transition-medium) forwards;
+  }
+  
+  /* Fade-in animation */
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px) scale(0.9); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+    to   { opacity: 1; transform: translateY(0)     scale(1); }
   }
   
   /* Category-specific backgrounds */
@@ -810,6 +822,8 @@ body {
   .portfolio-item.logo-design   { background: linear-gradient(135deg, rgba(255,152,0,0.2),   rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
   .portfolio-item.branding      { background: linear-gradient(135deg, rgba(156,39,176,0.2),  rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
   .portfolio-item.apps-design   { background: linear-gradient(135deg, rgba(233,30,99,0.2),   rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
+  .portfolio-item.cybersecurity { background: linear-gradient(135deg, rgba(0,200,83,0.2),   rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
+  
   
   /* Hover shine layer */
   .portfolio-item::before {
