@@ -662,6 +662,7 @@ body {
     right: 18%;
     animation-delay: 7s;
 }
+
 /* =========================================
    SKILLS SECTION STYLES
    ========================================= */
@@ -969,6 +970,7 @@ body {
     max-width: 1200px;            /* limit width */
     margin: 0 auto;               /* center horizontally */
     padding: 0 var(--spacing-lg); /* gutter */
+    padding-top: 3rem;
   }
   /* Decorative floating circle */
   .portfolio-section::before {
@@ -1092,8 +1094,72 @@ body {
     cursor: pointer;
     transition: all var(--transition-medium);
     display: block;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
-  
+/* Portfolio backgrounds with images + gradient overlay */
+.portfolio-item.web-design-1 {
+  background-image:
+    url("images/web1.jpg"),
+    linear-gradient(135deg, rgba(33,150,243,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.web-design-2 {
+  background-image:
+    url("images/web2.jpg"),
+    linear-gradient(135deg, rgba(33,150,243,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.logo-design-1 {
+  background-image:
+    url("images/logo1.jpg"),
+    linear-gradient(135deg, rgba(255,152,0,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.logo-design-2 {
+  background-image:
+    url("images/logo2.jpg"),
+    linear-gradient(135deg, rgba(255,152,0,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.branding-1 {
+  background-image:
+    url("images/brand1.jpg"),
+    linear-gradient(135deg, rgba(156,39,176,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.branding-2 {
+  background-image:
+    url("images/brand2.jpg"),
+    linear-gradient(135deg, rgba(156,39,176,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.apps-design-1 {
+  background-image:
+    url("images/app1.jpg"),
+    linear-gradient(135deg, rgba(244,67,54,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.apps-design-2 {
+  background-image:
+    url("images/app2.jpg"),
+    linear-gradient(135deg, rgba(244,67,54,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.cybersecurity-1 {
+  background-image:
+    url("images/cyber1.jpg"),
+    linear-gradient(135deg, rgba(76,175,80,0.3), rgba(0,255,136,0.1));
+}
+
+.portfolio-item.cybersecurity-2 {
+  background-image:
+    url("images/cyber2.jpg"),
+    linear-gradient(135deg, rgba(76,175,80,0.3), rgba(0,255,136,0.1));
+}
+
+
  /* Show/hide filtered items */
 #filter-all:checked ~ .portfolio-grid .portfolio-item {
     display: block;
@@ -1124,13 +1190,6 @@ body {
     from { opacity: 0; transform: translateY(30px) scale(0.9); }
     to   { opacity: 1; transform: translateY(0)     scale(1); }
   }
-  
-  /* Category-specific backgrounds */
-  .portfolio-item.web-design    { background: linear-gradient(135deg, rgba(33,150,243,0.2), rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
-  .portfolio-item.logo-design   { background: linear-gradient(135deg, rgba(255,152,0,0.2),   rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
-  .portfolio-item.branding      { background: linear-gradient(135deg, rgba(156,39,176,0.2),  rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
-  .portfolio-item.apps-design   { background: linear-gradient(135deg, rgba(233,30,99,0.2),   rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
-  .portfolio-item.cybersecurity { background: linear-gradient(135deg, rgba(0,200,83,0.2),   rgba(var(--primary-green-r),var(--primary-green-g),var(--primary-green-b),0.1)); }
   
   /* Hover shine layer */
   .portfolio-item::before {
@@ -1294,6 +1353,28 @@ body {
   .portfolio-item:hover .portfolio-description,
   .portfolio-item:hover .portfolio-links {
     transform: translateY(0);
+  }
+  /* View More Button */
+  .view-more-container {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .view-more-button {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .view-more-button:hover {
+    background-color: #00cc77;
+    transform: scale(1.05);
   }
   
   
