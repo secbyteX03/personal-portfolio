@@ -1,645 +1,878 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Font Awesome CDN -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Personal Portfolio Website - Magret Faith</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<!-- Sidebar with personal branding and navigation links -->
-     <div class="sidebar">
-        <div class="sidebar-header">
-            <div class="profile-circle">
-                <img src="images/magret.jpg" alt="Magret Faith" class="profile-image">
-            </div>
-            <div class="profile-name">Magret Faith</div>
-            <div class="profile-title">Cyber‑Savvy Technologist</div>
-        </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-        <nav class="sidebar-nav">
-            <a href="#home" class="nav-item active">
-                <span class="nav-icon"><i class="fas fa-home"></i></span>
-                <span>Home</span>
-            </a>
-            <a href="#about" class="nav-item">
-                <span class="nav-icon"><i class="fas fa-user"></i></span>
-                <span>About</span>
-            </a>
-            <a href="#services" class="nav-item">
-                <span class="nav-icon"><i class="fas fa-cogs"></i></span>
-                <span>Services</span>
-            </a>
-            <a href="#skills" class="nav-item">
-                <span class="nav-icon"><i class="fas fa-code"></i></span>
-                <span>Skills</span>
-            </a>
-            <a href="#portfolio" class="nav-item">
-                <span class="nav-icon"><i class="fas fa-folder"></i></span>
-                <span>Portfolio</span>
-            </a>
-            <a href="#contact-footer" class="nav-item">
-                <span class="nav-icon"><i class="fas fa-envelope"></i></span>
-                <span>Contact</span>
-            </a>
-        </nav>
-
-        <div class="sidebar-footer">
-            <div class="social-links-sidebar">
-                <a href="www.linkedin.com/in/magretfaith" class="contact-footer-social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/Faithmackey6" class="contact-footer-social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="contact-footer-social-link"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/secbyteX03" class="contact-footer-social-link"><i class="fab fa-github"></i></a>
-            </div>
+  <body>
+    <!-- Sidebar with personal branding and navigation links -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="profile-circle">
+          <img
+            src="images/magret.jpg"
+            alt="Magret Faith"
+            class="profile-image"
+          />
         </div>
+        <div class="profile-name">Magret Faith</div>
+        <div class="profile-title">Cyber‑Savvy Technologist</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#home" class="nav-item active">
+          <span class="nav-icon"><i class="fas fa-home"></i></span>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="nav-item">
+          <span class="nav-icon"><i class="fas fa-user"></i></span>
+          <span>About</span>
+        </a>
+        <a href="#services" class="nav-item">
+          <span class="nav-icon"><i class="fas fa-cogs"></i></span>
+          <span>Services</span>
+        </a>
+        <a href="#skills" class="nav-item">
+          <span class="nav-icon"><i class="fas fa-code"></i></span>
+          <span>Skills</span>
+        </a>
+        <a href="#portfolio" class="nav-item">
+          <span class="nav-icon"><i class="fas fa-folder"></i></span>
+          <span>Portfolio</span>
+        </a>
+        <a href="#contact-footer" class="nav-item">
+          <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="social-links-sidebar">
+          <a
+            href="www.linkedin.com/in/magretfaith"
+            class="contact-footer-social-link"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://x.com/Faithmackey6"
+            class="contact-footer-social-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="contact-footer-social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://github.com/secbyteX03"
+            class="contact-footer-social-link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
     </div>
 
-      <!-- Hero Section -->
-      <section class="hero-section" id="home">
-        <!-- Video Background -->
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="images/herovideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <!-- Video Background -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="images/herovideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-        <!-- Video Overlay -->
-        <div class="hero-video-overlay"></div>
+      <!-- Video Overlay -->
+      <div class="hero-video-overlay"></div>
 
-        <!-- Floating Background Elements -->
-        <div class="hero-background">
-            <div class="hero-shape"></div>
-            <div class="hero-shape"></div>
-            <div class="hero-shape"></div>
-        </div>
+      <!-- Floating Background Elements -->
+      <div class="hero-background">
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+      </div>
 
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-title">Magret Faith</h1>
-            <h2 class="hero-subtitle">
-                Cyber Risk Analyst | UX Technologist |  Secure Systems Strategist
-            </h2>
-            <p class="hero-description">
-                I design intuitive digital products and cohesive brand systems, 
-                then layer in smart automation and secure development to help businesses grow faster, 
-                operate smarter, and stay safe in a digital-first world.
-            </p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="hero-btn-primary">View My Work</a>
-                <a href="#contact" class="hero-btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
- <!-- About Section -->
- <section class="about-section" id="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <div class="section-header">About Me</div>
-                <h1 class="about-title">Secure. Optimize. Transform.</h1>
-                <h2 class="about-subtitle">
-                    Cybersecurity-Certified, Business Optimizer & Developer
-                </h2>
-
-                <p class="about-description">
-                    I’m Magret Faith, a cybersecurity-certified
-                     developer and aspiring Cyber Risk Analyst with a
-                      background in Actuarial Science. I specialize in 
-                      combining secure-by-design web development with 
-                      data-driven thinking to build resilient systems for modern businesses.
-                    With 5+ years of experience helping startups and SMEs grow safely in the
-                     digital era, I’m passionate about using automation, branding, and security 
-                     to reduce risk, optimize processes, and future-proof operations.
-                    
-                </p>
-                <a href="documents/MAGRET FAITH AKINYI CV.pdf" class="cta-button">View My CV</a>
-            </div>
-
-            <div class="photo-container">
-                <div class="photo-wrapper">
-                    <img src="images/magret.jpg" alt="Profile Photo" class="profile-photo">
-                    <div class="photo-placeholder">MF</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Services Section -->
-<section class="services-section" id="services">
-    <div class="container">
-      <div class="services-header">
-        <div class="section-label">My Services & Expertise</div>
-        <h2 class="services-title">Solutions I Provide</h2>
-        <p class="services-intro">
-          From user-centered UX design to robust cybersecurity defenses, I deliver end-to-end 
-          solutions that optimize your digital products, brand, and business operations.
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-title">Magret Faith</h1>
+        <h2 class="hero-subtitle">
+          Cyber Risk Analyst | UX Technologist | Secure Systems Strategist
+        </h2>
+        <p class="hero-description">
+          I design intuitive digital products and cohesive brand systems, then
+          layer in smart automation and secure development to help businesses
+          grow faster, operate smarter, and stay safe in a digital-first world.
         </p>
-      </div>
-  
-      <div class="services-grid">
-        <!-- UX Design -->
-        <article class="service-card">
-          <div class="service-card__icon"><i class="fas fa-laptop-code"></i></div>
-          <h3 class="service-card__title">Digital Product & UX Design</h3>
-          <h4 class="service-card__subtitle">UX Research | UI Prototyping | Figma</h4>
-          <p class="service-card__description">
-            I craft responsive websites and apps grounded in user research and accessibility—boosting conversions and streamlining operations.
-          </p>
-        </article>
-  
-        <!-- Brand Strategy -->
-        <article class="service-card">
-          <div class="service-card__icon"><i class="fas fa-bullhorn"></i></div>
-          <h3 class="service-card__title">Brand Strategy & Identity</h3>
-          <h4 class="service-card__subtitle">Visual Systems | Messaging</h4>
-          <p class="service-card__description">
-            I develop cohesive brand ecosystems—typography, color, and messaging—that resonate with your audience and amplify market presence.
-          </p>
-        </article>
-  
-        <!-- Automation -->
-        <article class="service-card">
-          <div class="service-card__icon"><i class="fas fa-cogs"></i></div>
-          <h3 class="service-card__title">Creative Assets & Growth Tools</h3>
-          <h4 class="service-card__subtitle">Automation | Business Optimization</h4>
-          <p class="service-card__description">
-            I deliver on-brand visuals—and lightweight automations (e.g. M-Pesa, GitHub Actions)—to eliminate manual work and accelerate growth.
-          </p>
-        </article>
-  
-        <!-- Cybersecurity -->
-        <article class="service-card">
-          <div class="service-card__icon"><i class="fas fa-shield-alt"></i></div>
-          <h3 class="service-card__title">Cybersecurity & Risk Analysis</h3>
-          <h4 class="service-card__subtitle">Threat Assessments | Secure Architecture</h4>
-          <p class="service-card__description">
-            I perform comprehensive vulnerability assessments, implement secure-by-design architectures, 
-            and develop incident response strategies to protect your assets and data.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-  
-   <!-- Skills Section -->
-    <section class="skills-section" id="skills">
-        <div class="container">
-            <div class="skills-content">
-                <div class="skills-text">
-                    <div class="section-header">Skills</div>
-                    <h3>My Expertise & Daily Tools</h3>
-                    <p>
-                        Every day, I push my limits, deepening UX insights,
-                        streamlining strategy, and automating smarter workflows.
-                        I combine technical expertise with creative vision to deliver
-                        impactful digital solutions that drive measurable results for clients across industries
-                    </p>
-                    <a href="#contact" class="skills-button">Hire Me</a>
-                </div>
-
-                <div class="tool-stack">
-                    <h5>Tool Stack & Skills</h5>
-
-                    <!-- Front-End Development -->
-                    <div class="category">
-                        <h6>Front‑End Dev</h6>
-                        <div class="skills-grid">
-                            <!-- HTML5 -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle html5">
-                                    <!-- HTML5 Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
-                                    </svg>
-                                    <div class="skill-percentage">92%</div>
-                                </div>
-                                <span class="skill-label">HTML5</span>
-                            </div>
-
-                            <!-- CSS3 -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle css3">
-                                    <!-- CSS3 Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
-                                    </svg>
-                                    <div class="skill-percentage">88%</div>
-                                </div>
-                                <span class="skill-label">CSS3</span>
-                            </div>
-
-                            <!-- JavaScript -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle javascript">
-                                    <!-- JavaScript Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
-                                    </svg>
-                                    <div class="skill-percentage">30%</div>
-                                </div>
-                                <span class="skill-label">JavaScript</span>
-                            </div>
-
-                            <!-- React -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle react">
-                                    <!-- React Icon -->
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                        alt="React" class="skill-icon" width="24" height="24">
-                                    <div class="skill-percentage">10%</div>
-                                </div>
-                                <span class="skill-label">React</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design & Prototyping -->
-                    <div class="category">
-                        <h6>Design & Prototyping</h6>
-                        <div class="skills-grid">
-                            <!-- Figma -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle figma">
-                                    <!-- Figma Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M15.854 8.98h-4.58V0h4.58c2.48 0 4.49 2.01 4.49 4.49s-2.01 4.49-4.49 4.49zM12.74 7.51h3.12c1.67 0 3.02-1.36 3.02-3.02s-1.35-3.02-3.02-3.02h-3.12v6.04zM8.15 8.98V1.47c-1.66 0-3.02 1.36-3.02 3.02s1.35 3.02 3.02 3.02h3.12zM8.15 24c-2.49 0-4.49-2.01-4.49-4.49s2-4.49 4.49-4.49h4.59v4.44c0 2.5-2.05 4.54-4.56 4.54z" />
-                                    </svg>
-                                    <div class="skill-percentage">95%</div>
-                                </div>
-                                <span class="skill-label">Figma</span>
-                            </div>
-
-                            <!-- Canva -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle canva">
-                                    <!-- Canva Icon -->
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-                                        alt="Canva" class="skill-icon" width="24" height="24">
-                                    <div class="skill-percentage">80%</div>
-                                </div>
-                                <span class="skill-label">Canva</span>
-                            </div>
-
-                            <!-- Prototyping -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle prototyping">
-                                    <!-- Prototyping/Wireframe Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm2 2h4v2H6V7zm0 4h6v2H6v-2zm0 4h4v2H6v-2zm8-6h4v6h-4V9z" />
-                                    </svg>
-                                    <div class="skill-percentage">90%</div>
-                                </div>
-                                <span class="skill-label">Prototyping</span>
-                            </div>
-
-                            <!-- Adobe XD -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle adobexd">
-                                    <!-- Adobe XD Official Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M13.966 22.624l5.333-5.333L14.621 12.615l4.678-4.678-5.333-5.333L8.288 8.282l-5.678-5.678-1.414 1.414 5.678 5.678-5.678 5.678 1.414 1.414 5.678-5.678 5.678 5.678zM2.019 2.019l19.962 19.962-1.414 1.414L.605 3.433z" />
-                                    </svg>
-                                    <div class="skill-percentage">15%</div>
-                                </div>
-                                <span class="skill-label">Adobe XD</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cyber-Security & Automation -->
-                    <div class="category">
-                        <h6>Cyber‑Security & Automation</h6>
-                        <div class="skills-grid">
-                            <!-- GitHub -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle github">
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.30 3.49.997.11-.78.42-1.31.76-1.60-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.23-3.22-.12-.30-.54-1.52.12-3.18 0 0 1.01-.32 3.30 1.23.96-.27 1.98-.40 3.00-.40 1.02.00 2.05.14 3.01.40 2.29-1.55 3.30-1.23 3.30-1.23.66 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.60-2.80 5.62-5.48 5.92.43.37.82 1.10.82 2.22v3.29c0 .32.19.69.80.58C20.56 21.80 24 17.30 24 12c0-6.63-5.37-12-12-12z" />
-                                    </svg>
-                                    <div class="skill-percentage">87%</div>
-                                </div>
-                                <span class="skill-label">GitHub</span>
-                            </div>
-
-                            <!-- Automation -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle automation">
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19-.15-.25-.42-.12-.64l2 3.46c.12.22.39.30.61.22l2.49-1.01c.52.40 1.06.74 1.69.99l.37 2.65c.04.24.25.42.50.42h4c.25 0 .46-.18.50-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z" />
-                                    </svg>
-                                    <div class="skill-percentage">83%</div>
-                                </div>
-                                <span class="skill-label">Automation</span>
-                            </div>
-
-                            <!-- Burp Suite - Using a security/shield icon since devicon doesn't have Burp Suite -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle burpsuite">
-                                    <!-- Security/Penetration Testing Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z" />
-                                    </svg>
-                                    <div class="skill-percentage">20%</div>
-                                </div>
-                                <span class="skill-label">Burp Suite</span>
-                            </div>
-
-                            <!-- Wireshark - Using a network analysis icon since devicon doesn't have Wireshark -->
-                            <div class="skill-circle-item">
-                                <div class="skill-circle wireshark">
-                                    <!-- Network Analysis Icon -->
-                                    <svg class="skill-icon" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="#00ff88"
-                                            d="M1,9L9,9L9,1L1,1V9M23,9V1H15V9H23M1,23H9V15H1V23M18,14L23,19L18,24L13,19L18,14M18,16.5L15.5,19L18,21.5L20.5,19L18,16.5M11,15H13V17H15V19H13V21H11V19H9V17H11V15Z" />
-                                    </svg>
-                                    <div class="skill-percentage">75%</div>
-                                </div>
-                                <span class="skill-label">Wireshark</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <div class="hero-buttons">
+          <a href="#portfolio" class="hero-btn-primary">View My Work</a>
+          <a href="#contact" class="hero-btn-secondary">Get In Touch</a>
         </div>
+      </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <div class="section-header">About Me</div>
+            <h1 class="about-title">Secure. Optimize. Transform.</h1>
+            <h2 class="about-subtitle">
+              Cybersecurity-Certified, Business Optimizer & Developer
+            </h2>
 
- <!-- Portfolio Section -->
-<section class="portfolio-section" id="portfolio">
-    <div class="container">
+            <p class="about-description">
+              Hi, I’m Magret Faith, a cybersecurity‑certified developer and
+              aspiring Cyber Risk Analyst with a BSc in Actuarial Science. I
+              combine actuarial risk modeling and predictive analytics with
+              secure‑by‑design web development to help startups and SMEs preempt
+              threats and optimize processes. With 5+ years of experience, I
+              fuse data‑driven insights, automation, and branding to build
+              resilient, future‑proof digital solutions.
+            </p>
+            <a href="documents/MAGRET FAITH AKINYI CV.pdf" class="cta-button"
+              >View My CV</a
+            >
+          </div>
+
+          <div class="photo-container">
+            <div class="photo-wrapper">
+              <img
+                src="images/magret.jpg"
+                alt="Profile Photo"
+                class="profile-photo"
+              />
+              <div class="photo-placeholder">MF</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="services-header">
+          <div class="section-label">My Services & Expertise</div>
+          <h2 class="services-title">Solutions I Provide</h2>
+          <p class="services-intro">
+            From user-centered UX design to robust cybersecurity defenses, I
+            deliver end-to-end solutions that optimize your digital products,
+            brand, and business operations.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- UX Design -->
+          <article class="service-card">
+            <div class="service-card__icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="service-card__title">Digital Product & UX Design</h3>
+            <h4 class="service-card__subtitle">
+              UX Research | UI Prototyping | Figma
+            </h4>
+            <p class="service-card__description">
+              I craft responsive websites and apps grounded in user research and
+              accessibility—boosting conversions and streamlining operations.
+            </p>
+          </article>
+
+          <!-- Brand Strategy -->
+          <article class="service-card">
+            <div class="service-card__icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3 class="service-card__title">Brand Strategy & Identity</h3>
+            <h4 class="service-card__subtitle">Visual Systems | Messaging</h4>
+            <p class="service-card__description">
+              I develop cohesive brand ecosystems—typography, color, and
+              messaging—that resonate with your audience and amplify market
+              presence.
+            </p>
+          </article>
+
+          <!-- Automation -->
+          <article class="service-card">
+            <div class="service-card__icon"><i class="fas fa-cogs"></i></div>
+            <h3 class="service-card__title">Creative Assets & Growth Tools</h3>
+            <h4 class="service-card__subtitle">
+              Automation | Business Optimization
+            </h4>
+            <p class="service-card__description">
+              I deliver on-brand visuals—and lightweight automations (e.g.
+              M-Pesa, GitHub Actions)—to eliminate manual work and accelerate
+              growth.
+            </p>
+          </article>
+
+          <!-- Cybersecurity -->
+          <article class="service-card">
+            <div class="service-card__icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="service-card__title">Cybersecurity & Risk Analysis</h3>
+            <h4 class="service-card__subtitle">
+              Threat Assessments | Secure Architecture
+            </h4>
+            <p class="service-card__description">
+              I perform comprehensive vulnerability assessments, implement
+              secure-by-design architectures, and develop incident response
+              strategies to protect your assets and data.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="skills-content">
+          <div class="skills-text">
+            <div class="section-header">Skills</div>
+            <h3>My Expertise & Daily Tools</h3>
+            <p>
+              Every day, I push my limits, deepening UX insights, streamlining
+              strategy, and automating smarter workflows. I combine technical
+              expertise with creative vision to deliver impactful digital
+              solutions that drive measurable results for clients across
+              industries
+            </p>
+            <a href="#contact" class="skills-button">Hire Me</a>
+          </div>
+
+          <div class="tool-stack">
+            <h5>Tool Stack & Skills</h5>
+
+            <!-- Front-End Development -->
+            <div class="category">
+              <h6>Front‑End Dev</h6>
+              <div class="skills-grid">
+                <!-- HTML5 -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle html5">
+                    <!-- HTML5 Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">92%</div>
+                  </div>
+                  <span class="skill-label">HTML5</span>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle css3">
+                    <!-- CSS3 Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">88%</div>
+                  </div>
+                  <span class="skill-label">CSS3</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle javascript">
+                    <!-- JavaScript Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">30%</div>
+                  </div>
+                  <span class="skill-label">JavaScript</span>
+                </div>
+
+                <!-- React -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle react">
+                    <!-- React Icon -->
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      alt="React"
+                      class="skill-icon"
+                      width="24"
+                      height="24"
+                    />
+                    <div class="skill-percentage">10%</div>
+                  </div>
+                  <span class="skill-label">React</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Design & Prototyping -->
+            <div class="category">
+              <h6>Design & Prototyping</h6>
+              <div class="skills-grid">
+                <!-- Figma -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle figma">
+                    <!-- Figma Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M15.854 8.98h-4.58V0h4.58c2.48 0 4.49 2.01 4.49 4.49s-2.01 4.49-4.49 4.49zM12.74 7.51h3.12c1.67 0 3.02-1.36 3.02-3.02s-1.35-3.02-3.02-3.02h-3.12v6.04zM8.15 8.98V1.47c-1.66 0-3.02 1.36-3.02 3.02s1.35 3.02 3.02 3.02h3.12zM8.15 24c-2.49 0-4.49-2.01-4.49-4.49s2-4.49 4.49-4.49h4.59v4.44c0 2.5-2.05 4.54-4.56 4.54z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">95%</div>
+                  </div>
+                  <span class="skill-label">Figma</span>
+                </div>
+
+                <!-- Canva -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle canva">
+                    <!-- Canva Icon -->
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                      alt="Canva"
+                      class="skill-icon"
+                      width="24"
+                      height="24"
+                    />
+                    <div class="skill-percentage">80%</div>
+                  </div>
+                  <span class="skill-label">Canva</span>
+                </div>
+
+                <!-- Prototyping -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle prototyping">
+                    <!-- Prototyping/Wireframe Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm2 2h4v2H6V7zm0 4h6v2H6v-2zm0 4h4v2H6v-2zm8-6h4v6h-4V9z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">90%</div>
+                  </div>
+                  <span class="skill-label">Prototyping</span>
+                </div>
+
+                <!-- Adobe XD -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle adobexd">
+                    <!-- Adobe XD Official Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M13.966 22.624l5.333-5.333L14.621 12.615l4.678-4.678-5.333-5.333L8.288 8.282l-5.678-5.678-1.414 1.414 5.678 5.678-5.678 5.678 1.414 1.414 5.678-5.678 5.678 5.678zM2.019 2.019l19.962 19.962-1.414 1.414L.605 3.433z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">15%</div>
+                  </div>
+                  <span class="skill-label">Adobe XD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cyber-Security & Automation -->
+            <div class="category">
+              <h6>Cyber‑Security & Automation</h6>
+              <div class="skills-grid">
+                <!-- GitHub -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle github">
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.30 3.49.997.11-.78.42-1.31.76-1.60-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.23-3.22-.12-.30-.54-1.52.12-3.18 0 0 1.01-.32 3.30 1.23.96-.27 1.98-.40 3.00-.40 1.02.00 2.05.14 3.01.40 2.29-1.55 3.30-1.23 3.30-1.23.66 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.60-2.80 5.62-5.48 5.92.43.37.82 1.10.82 2.22v3.29c0 .32.19.69.80.58C20.56 21.80 24 17.30 24 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">87%</div>
+                  </div>
+                  <span class="skill-label">GitHub</span>
+                </div>
+
+                <!-- Automation -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle automation">
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19-.15-.25-.42-.12-.64l2 3.46c.12.22.39.30.61.22l2.49-1.01c.52.40 1.06.74 1.69.99l.37 2.65c.04.24.25.42.50.42h4c.25 0 .46-.18.50-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">83%</div>
+                  </div>
+                  <span class="skill-label">Automation</span>
+                </div>
+
+                <!-- Burp Suite - Using a security/shield icon since devicon doesn't have Burp Suite -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle burpsuite">
+                    <!-- Security/Penetration Testing Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.4 16,13V16C16,17.4 15.4,18 14.8,18H9.2C8.6,18 8,17.4 8,16V13C8,12.4 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">20%</div>
+                  </div>
+                  <span class="skill-label">Burp Suite</span>
+                </div>
+
+                <!-- Wireshark - Using a network analysis icon since devicon doesn't have Wireshark -->
+                <div class="skill-circle-item">
+                  <div class="skill-circle wireshark">
+                    <!-- Network Analysis Icon -->
+                    <svg
+                      class="skill-icon"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        fill="#00ff88"
+                        d="M1,9L9,9L9,1L1,1V9M23,9V1H15V9H23M1,23H9V15H1V23M18,14L23,19L18,24L13,19L18,14M18,16.5L15.5,19L18,21.5L20.5,19L18,16.5M11,15H13V17H15V19H13V21H11V19H9V17H11V15Z"
+                      />
+                    </svg>
+                    <div class="skill-percentage">75%</div>
+                  </div>
+                  <span class="skill-label">Wireshark</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
         <!-- Filter System-->
         <div class="portfolio-content">
-            <div class="portfolio-header">
-                <div class="section-header">Portfolio</div>
-                <h2 class="portfolio-title">My Creative Work</h2>
+          <div class="portfolio-header">
+            <div class="section-header">Portfolio</div>
+            <h2 class="portfolio-title">My Creative Work</h2>
 
-                <!-- Visual Filter Labels -->
-                <div class="portfolio-filters">
-                    <label for="filter-all" class="filter-label">All</label>
-                    <label for="filter-web" class="filter-label">Web Design</label>
-                    <label for="filter-logo" class="filter-label">Logo Design</label>
-                    <label for="filter-brand" class="filter-label">Branding</label>
-                    <label for="filter-apps" class="filter-label">Apps Design</label>
-                    <label for="filter-cyber" class="filter-label">Cybersecurity</label>
+            <!-- Visual Filter Labels -->
+            <div class="portfolio-filters">
+              <label for="filter-all" class="filter-label">All</label>
+              <label for="filter-web" class="filter-label">Web Design</label>
+              <label for="filter-logo" class="filter-label">Logo Design</label>
+              <label for="filter-brand" class="filter-label">Branding</label>
+              <label for="filter-apps" class="filter-label">Apps Design</label>
+              <label for="filter-cyber" class="filter-label"
+                >Cybersecurity</label
+              >
+            </div>
+          </div>
+
+          <input
+            type="radio"
+            id="filter-all"
+            name="portfolio-filter"
+            class="filter-input"
+            checked
+          />
+          <input
+            type="radio"
+            id="filter-web"
+            name="portfolio-filter"
+            class="filter-input"
+          />
+          <input
+            type="radio"
+            id="filter-logo"
+            name="portfolio-filter"
+            class="filter-input"
+          />
+          <input
+            type="radio"
+            id="filter-brand"
+            name="portfolio-filter"
+            class="filter-input"
+          />
+          <input
+            type="radio"
+            id="filter-apps"
+            name="portfolio-filter"
+            class="filter-input"
+          />
+          <input
+            type="radio"
+            id="filter-cyber"
+            name="portfolio-filter"
+            class="filter-input"
+          />
+
+          <div class="portfolio-grid">
+            <!-- Web Design Projects -->
+            <div class="portfolio-item web-design web-design-1">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Web Design</div>
+                  <h3>E‑Commerce Platform</h3>
+                  <p class="portfolio-description">
+                    Modern responsive e‑commerce website with advanced
+                    filtering, payment integration, and admin dashboard.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> Live Demo</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fab fa-github"></i> GitHub</a
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
 
-            <input type="radio" id="filter-all" name="portfolio-filter" class="filter-input" checked>
-            <input type="radio" id="filter-web" name="portfolio-filter" class="filter-input">
-            <input type="radio" id="filter-logo" name="portfolio-filter" class="filter-input">
-            <input type="radio" id="filter-brand" name="portfolio-filter" class="filter-input">
-            <input type="radio" id="filter-apps" name="portfolio-filter" class="filter-input">
-            <input type="radio" id="filter-cyber" name="portfolio-filter" class="filter-input">
-
-            <div class="portfolio-grid">
-                <!-- Web Design Projects -->
-                <div class="portfolio-item web-design" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Web Design</div>
-                            <h3>E‑Commerce Platform</h3>
-                            <p class="portfolio-description">
-                                Modern responsive e‑commerce website with advanced filtering, payment integration, and admin dashboard.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> Live Demo</a>
-                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="portfolio-item web-design web-design-2">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Web Design</div>
+                  <h3>Portfolio Website</h3>
+                  <p class="portfolio-description">
+                    Creative portfolio site with smooth animations, dark mode
+                    toggle, and contact form integration.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> Live Demo</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fab fa-github"></i> GitHub</a
+                    >
+                  </div>
                 </div>
-
-                <div class="portfolio-item web-design" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Web Design</div>
-                            <h3>Portfolio Website</h3>
-                            <p class="portfolio-description">
-                                Creative portfolio site with smooth animations, dark mode toggle, and contact form integration.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> Live Demo</a>
-                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Logo Design Projects -->
-                <div class="portfolio-item logo-design" style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Logo Design</div>
-                            <h3>Tech Startup Logo</h3>
-                            <p class="portfolio-description">
-                                Modern minimal logo design for a tech startup, including brand guidelines and variations.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> View Design</a>
-                                <a href="#" class="portfolio-link"><i class="fas fa-file-alt"></i> Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item logo-design" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Logo Design</div>
-                            <h3>Restaurant Brand</h3>
-                            <p class="portfolio-description">
-                                Elegant logo design for fine dining restaurant with complete brand identity package.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> View Design</a>
-                                <a href="#" class="portfolio-link"><i class="fas fa-file-alt"></i> Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Branding Projects -->
-                <div class="portfolio-item branding" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Branding</div>
-                            <h3>Fitness Brand Identity</h3>
-                            <p class="portfolio-description">
-                                Complete brand identity for fitness company including logo, colors, typography, and marketing materials.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> View</a>
-                                <a href="#" class="portfolio-link"><i class="fas fa-file-alt"></i> Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item branding" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Branding</div>
-                            <h3>Corporate Rebranding</h3>
-                            <p class="portfolio-description">
-                                Full rebranding package for a corporate client: logo refresh, stationery, and style guide.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> View</a>
-                                <a href="#" class="portfolio-link"><i class="fas fa-file-alt"></i> Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Apps Design Projects -->
-                <div class="portfolio-item apps-design" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Apps Design</div>
-                            <h3>Health Tracker App</h3>
-                            <p class="portfolio-description">
-                                Mobile app design for tracking workouts, nutrition, and sleep with data‑driven insights.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> Prototype</a>
-                                <a href="#" class="portfolio-link"><i class="fas fa-file-alt"></i> Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item apps-design" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Apps Design</div>
-                            <h3>Finance Dashboard App</h3>
-                            <p class="portfolio-description">
-                                Intuitive UI for a personal finance app: budgets, charts, and smart notifications.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> Prototype</a>
-                                <a href="#" class="portfolio-link"><i class="fas fa-file-alt"></i> Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cybersecurity Project  -->
-                <div class="portfolio-item cybersecurity" style="background-image: url('https://images.unsplash.com/photo-1591696331119-f4b6f1173d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Cybersecurity</div>
-                            <h3>Secure Login System </h3>
-                            <p class="portfolio-description">
-                            Secure authentication system with password hashing, rate limiting, and two-factor authentication (2FA) to reduce brute-force and phishing risks.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> Live Demo</a>
-                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cybersecurity Project  -->
-                <div class="portfolio-item cybersecurity" style="background-image: url('https://images.unsplash.com/photo-1633340068340-c8d44c71f986?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Cybersecurity</div>
-                            <h3>Fraud Detection Dashboard</h3>
-                            <p class="portfolio-description">
-                                A prototype dashboard analyzing M-Pesa transactions to detect fraud patterns and trigger user alerts based on predefined risk thresholds.
-                            </p>
-                            <div class="portfolio-links">
-                                <a href="#" class="portfolio-link"><i class="fas fa-link"></i> View Case</a>
-                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+              </div>
             </div>
+
+            <!-- Logo Design Projects -->
+            <div class="portfolio-item logo-design logo-design-1">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Logo Design</div>
+                  <h3>Tech Startup Logo</h3>
+                  <p class="portfolio-description">
+                    Modern minimal logo design for a tech startup, including
+                    brand guidelines and variations.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> View Design</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-file-alt"></i> Case Study</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item logo-design logo-design-2">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Logo Design</div>
+                  <h3>Restaurant Brand</h3>
+                  <p class="portfolio-description">
+                    Elegant logo design for fine dining restaurant with complete
+                    brand identity package.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> View Design</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-file-alt"></i> Case Study</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Branding Projects -->
+            <div class="portfolio-item branding branding-1">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Branding</div>
+                  <h3>Fitness Brand Identity</h3>
+                  <p class="portfolio-description">
+                    Complete brand identity for fitness company including logo,
+                    colors, typography, and marketing materials.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> View</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-file-alt"></i> Case Study</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item branding branding-2">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Branding</div>
+                  <h3>Corporate Rebranding</h3>
+                  <p class="portfolio-description">
+                    Full rebranding package for a corporate client: logo
+                    refresh, stationery, and style guide.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> View</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-file-alt"></i> Case Study</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Apps Design Projects -->
+            <div class="portfolio-item apps-design apps-design-1">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Apps Design</div>
+                  <h3>Health Tracker App</h3>
+                  <p class="portfolio-description">
+                    Mobile app design for tracking workouts, nutrition, and
+                    sleep with data‑driven insights.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> Prototype</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-file-alt"></i> Case Study</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item apps-design apps-design-2">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Apps Design</div>
+                  <h3>Finance Dashboard App</h3>
+                  <p class="portfolio-description">
+                    Intuitive UI for a personal finance app: budgets, charts,
+                    and smart notifications.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> Prototype</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-file-alt"></i> Case Study</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cybersecurity Project  -->
+            <div class="portfolio-item cybersecurity cybersecurity-1">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Cybersecurity</div>
+                  <h3>Secure Login System</h3>
+                  <p class="portfolio-description">
+                    Secure authentication system with password hashing, rate
+                    limiting, and two-factor authentication (2FA) to reduce
+                    brute-force and phishing risks.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> Live Demo</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fab fa-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cybersecurity Project  -->
+            <div class="portfolio-item cybersecurity cybersecurity-2">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <div class="portfolio-category">Cybersecurity</div>
+                  <h3>Fraud Detection Dashboard</h3>
+                  <p class="portfolio-description">
+                    A prototype dashboard analyzing M-Pesa transactions to
+                    detect fraud patterns and trigger user alerts based on
+                    predefined risk thresholds.
+                  </p>
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link"
+                      ><i class="fas fa-link"></i> View Case</a
+                    >
+                    <a href="#" class="portfolio-link"
+                      ><i class="fab fa-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+      <div class="view-more-container">
+        <a href="projects.html" class="view-more-button">View More Projects</a>
+      </div>
+    </section>
 
- <!-- Contact Form Footer -->
- <footer class="contact-footer" id="contact-footer">
-    <div class="container">
+    <!-- Contact Form Footer -->
+    <footer class="contact-footer" id="contact-footer">
+      <div class="container">
         <div class="contact-footer-content">
-            <div class="contact-footer-info">
-                <div class="section-header">Contact</div>
-                <h3>Let's Work Together</h3>
-                <p>
-                    I’m especially excited about cybersecurity, digital safety,
-                     and risk-focused roles and would love to collaborate on 
-                     projects that bridge security, tech, and creativity.
-                </p>
+          <div class="contact-footer-info">
+            <div class="section-header">Contact</div>
+            <h3>Let's Work Together</h3>
+            <p>
+              I’m especially excited about cybersecurity, digital safety, and
+              risk-focused roles and would love to collaborate on projects that
+              bridge security, tech, and creativity.
+            </p>
 
-                <div class="contact-footer-details">
-                    <div class="contact-footer-item">
-                        <div class="contact-footer-icon"><i class="fas fa-envelope"></i></div>
-                        <span>faithmagret10@gmail.com</span>
-                    </div>
-                    <div class="contact-footer-item">
-                        <div class="contact-footer-icon"><i class="fas fa-phone"></i></div>
-                        <span>(+254) 758 343 080</span>
-                    </div>
-                    <div class="contact-footer-item">
-                        <div class="contact-footer-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <span>Nairobi, Kenya</span>
-                    </div>
+            <div class="contact-footer-details">
+              <div class="contact-footer-item">
+                <div class="contact-footer-icon">
+                  <i class="fas fa-envelope"></i>
                 </div>
-
-                <div class="contact-footer-social">
-                    <a href="#" class="contact-footer-social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="contact-footer-social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="contact-footer-social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="contact-footer-social-link"><i class="fab fa-github"></i></a>
+                <span>faithmagret10@gmail.com</span>
+              </div>
+              <div class="contact-footer-item">
+                <div class="contact-footer-icon">
+                  <i class="fas fa-phone"></i>
                 </div>
+                <span>(+254) 758 343 080</span>
+              </div>
+              <div class="contact-footer-item">
+                <div class="contact-footer-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>Nairobi, Kenya</span>
+              </div>
             </div>
 
-            <form class="contact-footer-form">
-                <div class="footer-form-group">
-                    <label for="footer-name">Full Name</label>
-                    <input type="text" id="footer-name" name="name" required>
-                </div>
+            <div class="contact-footer-social">
+              <a href="#" class="contact-footer-social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="contact-footer-social-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="contact-footer-social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="contact-footer-social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
 
-                <div class="footer-form-group">
-                    <label for="footer-email">Email Address</label>
-                    <input type="email" id="footer-email" name="email" required>
-                </div>
+          <form class="contact-footer-form">
+            <div class="footer-form-group">
+              <label for="footer-name">Full Name</label>
+              <input type="text" id="footer-name" name="name" required />
+            </div>
 
-                <div class="footer-form-group">
-                    <label for="footer-subject">Subject</label>
-                    <input type="text" id="footer-subject" name="subject" required>
-                </div>
+            <div class="footer-form-group">
+              <label for="footer-email">Email Address</label>
+              <input type="email" id="footer-email" name="email" required />
+            </div>
 
-                <div class="footer-form-group">
-                    <label for="footer-message">Message</label>
-                    <textarea id="footer-message" name="message" required
-                        placeholder="Tell me about your project..."></textarea>
-                </div>
+            <div class="footer-form-group">
+              <label for="footer-subject">Subject</label>
+              <input type="text" id="footer-subject" name="subject" required />
+            </div>
 
-                <button type="submit" class="footer-submit-btn">Send Message</button>
-            </form>
+            <div class="footer-form-group">
+              <label for="footer-message">Message</label>
+              <textarea
+                id="footer-message"
+                name="message"
+                required
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="footer-submit-btn">
+              Send Message
+            </button>
+          </form>
         </div>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
