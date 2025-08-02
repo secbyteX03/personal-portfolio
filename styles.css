@@ -6,15 +6,10 @@
     --primary-green: #00ff88;
     --primary-green-dark: #00cc6a;
     --primary-green-darker: #00aa5a;
-
-/* Skills Section Custom Variables */
-        --skills-primary-color: var(--primary-green);
-        --skills-bg-color: var(--bg-secondary);
-        --skills-text-primary: var(--text-primary);
-        --skills-text-secondary: var(--text-secondary);
-        --skills-circle-size: 60px;
-        --skills-circle-stroke: 4px;
-      
+    --primary-green-r: 0;
+    --primary-green-g: 255;
+    --primary-green-b: 136;
+    
     /* Background Colors */
     --bg-primary: #0a0a0a;
     --bg-secondary: #1a1a2e;
@@ -28,13 +23,13 @@
     --text-muted: #999999;
     --text-dark: #666666;
     --text-black: #000000;
+    --white: #ffffff;
+    --gray: #cccccc;
     
-    /* Border Colors */
+    /* Border & Shadows */
     --border-primary: rgba(0, 255, 136, 0.1);
     --border-secondary: rgba(0, 255, 136, 0.2);
     --border-active: var(--primary-green);
-    
-    /* Shadow Colors */
     --shadow-primary: rgba(0, 255, 136, 0.3);
     --shadow-secondary: rgba(0, 255, 136, 0.2);
     --shadow-light: rgba(0, 255, 136, 0.1);
@@ -53,6 +48,11 @@
     --spacing-xl: 30px;
     --spacing-xxl: 40px;
     --spacing-section: 80px;
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 15px;
+    --space-lg: 20px;
+    --space-xl: 30px;
     
     /* Font Sizes */
     --font-xs: 11px;
@@ -68,12 +68,12 @@
     --font-6xl: 48px;
     --font-7xl: 64px;
     
-    /* Transitions */
+    /* Transitions & Effects */
     --transition-fast: 0.3s ease;
     --transition-medium: 0.5s ease;
     --transition-slow: 1s ease;
     
-    /* Dimensions */
+    /* Layout */
     --sidebar-width: 280px;
     --border-radius-sm: 6px;
     --border-radius-md: 8px;
@@ -81,8 +81,11 @@
     --border-radius-xl: 15px;
     --border-radius-2xl: 20px;
     --border-radius-full: 50%;
+    
+    /* Skills specific */
+    --skills-circle-size: 60px;
+    --skills-circle-stroke: 4px;
 }
-
 /* ============================================
    GLOBAL RESET & BASE STYLES
    ============================================ */
