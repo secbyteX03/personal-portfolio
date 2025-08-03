@@ -2,11 +2,9 @@
 <img width="1300" height="683" alt="portfolio" src="https://github.com/user-attachments/assets/19ecfdb4-bbea-4284-ad64-262b35d81ff4" />
 
 A responsive personal portfolio website showcasing my skills, projects, and background as a cybersecurity-certified developer and UX technologist.
-## Live Demo
-
-The portfolio is deployed on Netlify:  
-👉 [Click here to view]([https://secbytex03.github.io/portfolio](https://faithmagret.netlify.app/))
-
+## 🌟 Live Demo
+Experience the portfolio live:  
+[![Open in Netlify](https://img.shields.io/badge/Open_in-Netlify-00C7B7?logo=netlify)](https://faithmagret.netlify.app)
 ## Features
 
 - **Modern Dark Theme** with vibrant green accents
@@ -149,3 +147,4 @@ portfolio/
 **Developed by Magret Faith**  
 *Cyber-Savvy Technologist & UX Designer*  
 Nairobi, Kenya • 2025
+
