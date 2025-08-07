@@ -59,16 +59,15 @@ portfolio/
 ├── images/             # Project images
 │   ├── magret.jpg      # Profile photo
 │   └── herovideo.mp4   # Hero background video
-    └── web1.jpg        #project image
-    └──web2.jpg         #project image
-    └──app1.jpg         #project image
-    └──app2.jpg         #project image
-    └── logo1.jpg       #project image
-    └──logo2.jpg        #project image
-    └──cyber1.jpg       #project image
-    └──cyber2.jpg       #project image
-    └──band1.jpg        #project image
-    └──brand2.jpg       #project image
+    └── project image
+    └──project image
+    └──project image
+    └──project image
+    └── project image
+    └──project image
+    └──project image
+    └──project image
+    └──project image
 ├── documents/          #Supporting files
 │   └── MAGRET FAITH AKINYI CV.pdf
 └── README.md           # This documentation
@@ -147,4 +146,5 @@ portfolio/
 **Developed by Magret Faith**  
 *Cyber-Savvy Technologist & UX Designer*  
 Nairobi, Kenya • 2025
+
 
