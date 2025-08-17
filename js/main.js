@@ -135,4 +135,101 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reset previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            document.getElementById('form-message').textContent = '';
+            document.getElementById('form-message').className = 'form-message';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const submitButton = document.getElementById('submit-button');
+            const buttonText = submitButton.querySelector('.button-text');
+            const buttonLoader = submitButton.querySelector('.button-loader');
+            
+            // Show loading state
+            buttonText.style.display = 'none';
+            buttonLoader.style.display = 'inline-block';
+            submitButton.disabled = true;
+            
+            // Client-side validation
+            let isValid = true;
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Validate name
+            if (name.length < 2) {
+                document.getElementById('name-error').textContent = 'Name must be at least 2 characters long';
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                isValid = false;
+            }
+            
+            // Validate subject
+            if (subject.length < 5) {
+                document.getElementById('subject-error').textContent = 'Subject must be at least 5 characters long';
+                isValid = false;
+            }
+            
+            // Validate message
+            if (message.length < 10) {
+                document.getElementById('message-error').textContent = 'Message must be at least 10 characters long';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                buttonText.style.display = 'inline-block';
+                buttonLoader.style.display = 'none';
+                submitButton.disabled = false;
+                return;
+            }
+            
+            // Submit form data via AJAX
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Reset form on success
+                if (data.message) {
+                    contactForm.reset();
+                    const messageElement = document.getElementById('form-message');
+                    messageElement.textContent = data.message;
+                    messageElement.className = 'form-message success';
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        messageElement.textContent = '';
+                        messageElement.className = 'form-message';
+                    }, 5000);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const messageElement = document.getElementById('form-message');
+                messageElement.textContent = 'An error occurred. Please try again later.';
+                messageElement.className = 'form-message error';
+            })
+            .finally(() => {
+                // Reset button state
+                buttonText.style.display = 'inline-block';
+                buttonLoader.style.display = 'none';
+                submitButton.disabled = false;
+            });
+        });
+    }
 });

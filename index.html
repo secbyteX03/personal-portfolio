@@ -29,13 +29,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Personal Portfolio Website - Magret Faith</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <!-- Preload critical resources -->
-  <link rel="preload" href="js/main.js" as="script">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 </head>
 
-<body class="preload">
+<body>
   <!-- Sidebar with personal branding and navigation links -->
   <input type="checkbox" id="mobile-menu-checkbox" />
   <label for="mobile-menu-checkbox" class="mobile-menu-toggle">
@@ -136,9 +132,9 @@
     </div>
   </section>
 
-  <main class="fade-in">
+  <main>
     <!-- About Section -->
-    <section class="about-section fade-in" id="about">
+    <section class="about-section" id="about">
       <div class="container">
         <div class="about-content">
           <div class="about-text">
@@ -175,7 +171,7 @@
         <div class="interests-header">
           <div class="section-header">My Interests</div>
           <h2 class="interests-title">Beyond the Code</h2>
-          <p class="interests-intro">
+          <p class="interests-subtitle">
             When I'm not securing systems or designing interfaces, you will
             find me exploring these passions that keep me creative, balanced,
             and constantly learning new perspectives.
@@ -246,7 +242,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services-section slide-up" id="services">
+    <section class="services-section" id="services">
       <div class="container">
         <div class="services-header">
           <div class="section-header">My Services & Expertise</div>
@@ -325,7 +321,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills-section slide-up" id="skills">
+    <section class="skills-section" id="skills">
       <div class="container">
         <div class="skills-content">
           <div class="skills-text">
@@ -517,7 +513,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio-section slide-up" id="portfolio">
+    <section class="portfolio-section" id="portfolio">
       <div class="container">
         <!-- Portfolio Filter Inputs -->
         <input type="radio" id="filter-all" name="portfolio-filter" class="filter-input" checked />
@@ -888,7 +884,7 @@
   </main>
 
   <!-- Contact Form Footer -->
-  <footer class="contact-footer fade-in" id="contact-footer">
+  <footer class="contact-footer" id="contact-footer">
     <div class="container">
       <div class="contact-footer-content">
         <div class="contact-footer-info">
@@ -931,43 +927,42 @@
           </div>
         </div>
 
-        <form class="contact-footer-form">
+        <form id="contactForm" class="contact-footer-form" novalidate>
+          <div id="form-message" class="form-message"></div>
+          
           <div class="footer-form-group">
             <label for="footer-name">Full Name</label>
-            <input type="text" id="footer-name" name="name" required />
+            <input type="text" id="footer-name" name="name" required minlength="2" maxlength="100" />
+            <div class="error-message" id="name-error"></div>
           </div>
 
           <div class="footer-form-group">
             <label for="footer-email">Email Address</label>
             <input type="email" id="footer-email" name="email" required />
+            <div class="error-message" id="email-error"></div>
           </div>
 
           <div class="footer-form-group">
             <label for="footer-subject">Subject</label>
-            <input type="text" id="footer-subject" name="subject" required />
+            <input type="text" id="footer-subject" name="subject" required minlength="5" maxlength="200" />
+            <div class="error-message" id="subject-error"></div>
           </div>
 
           <div class="footer-form-group">
             <label for="footer-message">Message</label>
-            <textarea id="footer-message" name="message" required
+            <textarea id="footer-message" name="message" required minlength="10" maxlength="2000"
               placeholder="Tell me about your project..."></textarea>
+            <div class="error-message" id="message-error"></div>
           </div>
 
-          <button type="submit" class="footer-submit-btn">
-            Send Message
+          <button type="submit" class="footer-submit-btn" id="submit-button">
+            <span class="button-text">Send Message</span>
+            <span class="button-loader" style="display: none;">Sending...</span>
           </button>
         </form>
       </div>
     </div>
   </footer>
-  <!-- Load JavaScript -->
-  <script>
-    // Remove preload class after page load to prevent transitions from firing on load
-    window.addEventListener('load', function () {
-      document.body.classList.remove('preload');
-    });
-  </script>
-  <script src="js/main.js" defer></script>
 </body>
 
 </html>
