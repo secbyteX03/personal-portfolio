@@ -2,15 +2,27 @@
 
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Cache DOM elements
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-item');
+    const sections = document.querySelectorAll('section[id]');
+    const mobileCheckbox = document.getElementById('mobile-menu-checkbox');
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (mobileCheckbox.checked) {
+                    mobileCheckbox.checked = false;
+                }
+                
+                // Smooth scroll to target
                 window.scrollTo({
                     top: targetElement.offsetTop - 80, // Adjust for fixed header
                     behavior: 'smooth'
@@ -18,9 +30,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Update URL without page jump
                 history.pushState(null, null, targetId);
+                
+                // Update active nav item
+                updateActiveNav(targetId);
             }
         });
     });
+    
+    // Update active nav item based on scroll position
+    function updateActiveNav() {
+        let current = '';
+        const scrollPosition = window.scrollY + 150; // Adjust for header height
+        
+        // Find current section in view
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = '#' + section.getAttribute('id');
+            }
+        });
+        
+        // Update active class on nav items
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Add scroll event listener for active section highlighting
+    window.addEventListener('scroll', function() {
+        updateActiveNav();
+    });
+    
+    // Set initial active section on page load
+    updateActiveNav();
 
     // Add scroll reveal animation
     const animateOnScroll = function() {
@@ -36,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Initial check
+    // Initial check for animations
     animateOnScroll();
     
-    // Check on scroll
+    // Check on scroll for animations
     window.addEventListener('scroll', animateOnScroll);
 
     // Back to top button
@@ -78,4 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
         document.body.appendChild(script);
     }
+    
+    // Close mobile menu when clicking on a nav item
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (mobileCheckbox.checked) {
+                mobileCheckbox.checked = false;
+            }
+        });
+    });
 });
