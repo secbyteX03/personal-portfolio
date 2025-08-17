@@ -38,17 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Update active nav item based on scroll position
-    function updateActiveNav() {
+    function updateActiveNav(targetId = null) {
         let current = '';
-        const scrollPosition = window.scrollY + 150; // Adjust for header height
+        const scrollPosition = targetId ? 
+            document.querySelector(targetId).offsetTop : 
+            window.scrollY + 150; // Adjust for header height
         
         // Find current section in view
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+            const sectionTop = section.offsetTop - 100; // Add offset for better detection
             const sectionHeight = section.offsetHeight;
+            const sectionId = '#' + section.getAttribute('id');
             
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                current = '#' + section.getAttribute('id');
+            if (
+                scrollPosition >= sectionTop && 
+                scrollPosition < sectionTop + sectionHeight
+            ) {
+                current = sectionId;
             }
         });
         
@@ -57,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.remove('active');
             if (link.getAttribute('href') === current) {
                 link.classList.add('active');
+                
+                // Scroll the active nav item into view if it's not visible
+                const sidebar = document.querySelector('.sidebar');
+                const sidebarRect = sidebar.getBoundingClientRect();
+                const linkRect = link.getBoundingClientRect();
+                
+                if (linkRect.bottom > sidebarRect.bottom || linkRect.top < sidebarRect.top) {
+                    link.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
             }
         });
     }
